@@ -8,7 +8,7 @@ $(document).ready(function() {
         // Perform your validation here (e.g., check username and password)
         if (username === 'admin' && password === 'admin') {
             // Redirect to the target HTML page if credentials are correct
-            window.location.href = 'task.html';
+            window.location.href = 'task-main-page/task-main-page.html';
         } else {
             // Display an error message or perform other actions for incorrect credentials
             $('#error').text('Incorrect username or password. Please try again.');

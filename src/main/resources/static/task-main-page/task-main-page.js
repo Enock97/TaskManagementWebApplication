@@ -2,18 +2,20 @@ $(function(){
     getAll();
 });
 
-function regTask() {
+/*
+function createTask() {
     const task = {
-        name : $("#name").val(),
-        description : $("#description").val()
+        Name : $("#Name").val(),
+        Description : $("#Description").val()
     };
     const url = "/save";
     $.post(url, task, function(result){
         getAll();
     });
-    $("#name").val("");
-    $("#description").val("");
+    $("#Name").val("");
+    $("#Description").val("");
 };
+*/
 
 function getAll() {
     $.get( "/getAll", function( data ) {
@@ -22,18 +24,20 @@ function getAll() {
 };
 
 function formatData(tasks){
-    var ut = "<table class='table table-striped'>" +
+    var out = "<table class='table table-striped'>" +
         "<tr>" +
-        "<th>Navn</th><th>Adresse</th>" +
+        "<th style='font-weight: bold;'>Task</th><th>Edit</th><th>Delete</th>" +
         "</tr>";
-    for(let i in kunder ){
-        ut+="<tr><td>"+kunder[i].navn+"</td><td>"+kunder[i].adresse+"</td></tr>"
+    for (let i in tasks) {
+        out += "<tr><td>"+tasks[i].name+"<br>"+tasks[i].description+"</td>" +
+               "<td><a href='../edit-task/edit-task.html'><button class='btn btn-success'>Edit</button></a></td>" +
+               "<td><button class='btn btn-danger' onclick='deleteTask("+tasks[i].id+")'>Delete</button></td></tr>";
     }
-    $("#kundene").html(ut);
+    $("#tasks").html(out);
 }
 
-function deleteTasks() {
-    $.get( "/deleteAll", function( data ) {
-        getAll();
+function deleteTask(taskId) {
+    $.get("/delete/" + taskId, function(data) {
+        getAll(); // Refresh the task list after deleting
     });
-};
+}
