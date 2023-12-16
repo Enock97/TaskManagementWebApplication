@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 public class TaskController {
 
     @Autowired
@@ -20,12 +21,8 @@ public class TaskController {
     }
 
     @GetMapping("getOneTask/{id}")
-    public void getTaskById(@PathVariable int id) {
-        Task existingTask = rep.getTaskById(id);
-
-        if (existingTask != null) {
-            rep.getTaskById(id);
-        }
+    public Task getTaskById(@PathVariable int id) {
+        return rep.getTaskById(id);
     }
 
     @PutMapping("/update/{id}")
