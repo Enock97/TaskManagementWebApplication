@@ -19,6 +19,15 @@ public class TaskController {
         return rep.getTasks();
     }
 
+    @GetMapping("getOneTask/{id}")
+    public void getTaskById(@PathVariable int id) {
+        Task existingTask = rep.getTaskById(id);
+
+        if (existingTask != null) {
+            rep.getTaskById(id);
+        }
+    }
+
     @PutMapping("/update/{id}")
     public void updateTask(@PathVariable int id, Task updatedTask) {
         Task existingTask = rep.getTaskById(id);
