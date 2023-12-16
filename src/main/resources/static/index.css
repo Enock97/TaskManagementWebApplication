@@ -1,0 +1,50 @@
+.center {
+margin: auto;
+text-align: center;
+font-family: 'Roboto', sans-serif;
+}
+
+.center-login {
+display: flex;
+flex-direction: row;
+/*
+margin: auto;
+width: 25%; */
+font-family: 'Roboto', sans-serif;
+}
+
+.flex-login-div {
+display: flex;
+flex-direction: column;
+padding-top: 150px;
+width: 60%;
+}
+
+label{
+    padding-top: 5px;
+}
+
+.left-image {
+text-align: left;
+width: 70%;
+margin-top: 100px;
+margin-left: 100px;
+margin-right: 100px;
+}
+
+.right-image {
+text-align: right;
+width: 65%;
+margin-top: 100px;
+margin-right: 100px;
+margin-left: 100px;
+}
+
+img {
+    max-width: 100%; /* Ensure images don't exceed their parent container */
+}
+
+.error-label {
+color: red;
+font-family: 'Roboto', sans-serif;
+}
