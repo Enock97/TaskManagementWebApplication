@@ -109,3 +109,15 @@ input[type=button]:hover {
     filter: brightness(90%);
     box-shadow: 0 4px 4px;
 }
+#feil1{
+color: red;
+font-family: 'Roboto', sans-serif;
+}
+#feil2{
+color: red;
+font-family: 'Roboto', sans-serif;
+}
+#feil3{
+color: red;
+font-family: 'Roboto', sans-serif;
+}

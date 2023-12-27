@@ -1,58 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Task Management Webapplication</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="edit-task.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <script src="edit-task.js"></script>
-    <meta charset="UTF-8">
-    <title>Task Management Webapplication</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Include necessary stylesheets and scripts -->
-</head>
-<body>
-
-<!-- Edit Task Form -->
 <div class="main">
     <input type="hidden" id="taskId" />
     <form>
-
         <h2>Edit Task</h2>
         <hr class="tynnlinje">
-
         <div class="containerName">
             <label for="Name">Name of task:</label>
             <input type="text" id="Name" placeholder="The task's name...">
+            <div id="feil1"></div>
         </div>
-
         <div class="containerDescription">
             <label for="Description">Description of the task:</label>
             <textarea id="Description" placeholder="The description of the task..." rows="4"></textarea>
+            <div id="feil2"></div>
         </div>
-
-        <!-- Button for editing a task -->
         <div class="containerButton">
             <input type="button" id="upd" value="Edit Task" class="btn btn-success" onclick="updateTask()">
         </div>
+        <div id="feil3"></div>
 
         <div id="feil"></div>
-
     </form>
 </div>
 
-<!-- Include your JavaScript file (edit-task.js) here -->
+<script src="edit-task.js"></script>
 
 </body>
 </html>
 
-
-</body>
-</html>
